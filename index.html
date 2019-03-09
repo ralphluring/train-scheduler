@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Train Scheduler</title>
+    <title>Train Scheduler</title>  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Link to firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <!-- Added Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+          <h1 class="text-center">Train Scheduler</h1>
+          <h3 class="text-center">Add new trains to the schedule and track the schedule of trains</h3>
+        </div>
+
+        <div class="row">
+            <table class="table table-striped col-12">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequencey(min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td id="time">John</td>
+                        <td id="destination">Mexico</td>
+                        <td id="frequency">10</td>
+                        <td id="nextArrival">01:25 PM</td>
+                        <td id="minutesAway">10</td>      
+                    </tr>      
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <form>
+                <div class="form-group">
+                  <label for="trainName">Train Name</label>
+                  <input type="trainName" class="form-control" id="trainName" placeholder="New Train Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Destination</label>
+                    <input type="text" class="form-control" id="dest" placeholder="Train Destination">
+                </div>
+
+                <div class="form-group">
+                    <label for="firstTrain">First Train Time(HH:mm - Military Time)</label>
+                    <input type="firstTrain" class="form-control" id="firstTrain" placeholder="Train Start Time- 23:22">
+                </div>
+
+                <div class="form-group">
+                    <label for="frequency">Frequency(min)</label>
+                    <input type="text" class="form-control" id="freq" placeholder="Train Frequency">
+                </div>
     
+                <input class="btn btn-primary" id="newTrainSubmit" type="submit" value="submit">
+                
+            </form>
+        </div>
+
+
+    </div>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>

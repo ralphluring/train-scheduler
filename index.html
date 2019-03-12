@@ -11,6 +11,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <!-- Added Moment JS -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -18,8 +19,11 @@
         <div class="jumbotron">
           <h1 class="text-center">Train Scheduler</h1>
           <h3 class="text-center">Add new trains to the schedule and track the schedule of trains</h3>
+          <div id="currentTime"></div>
+
         </div>
 
+        
         <div class="row">
             <table class="table table-striped col-12">
                 <thead>
@@ -33,11 +37,7 @@
                 </thead>
                 <tbody id="tableBody">
                     <tr>
-                        <td id="time">John</td>
-                        <td id="destination">Mexico</td>
-                        <td id="frequency">10</td>
-                        <td id="nextArrival">01:25 PM</td>
-                        <td id="minutesAway">10</td>      
+                        
                     </tr>      
                 </tbody>
             </table>

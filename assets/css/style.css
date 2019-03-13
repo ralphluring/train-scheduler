@@ -4,3 +4,19 @@
     font-weight: bold;
     color:green;
 }
+
+.newTrainForm{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+   
+}
+
+.formContainer{
+    display: grid;
+    justify-items: center;
+}
+
+#newTrainSubmit{
+    justify-self: center;
+}
